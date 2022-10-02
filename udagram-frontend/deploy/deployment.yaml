@@ -1,11 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: frontend
   labels:
     service: frontend
   name: frontend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       service: frontend
@@ -13,18 +14,19 @@ spec:
     metadata:
       labels:
         service: frontend
+        api: external
     spec:
       containers:
-      - image: mohamedatef25/udagram-frontend
-        name: frontend
-        imagePullPolicy: Always                
-        ports:
-        - containerPort: 80
-          resources:
-            requests:
-              memory: "64Mi"
-              cpu: "250m"
-            limits:
-              memory: "1024Mi"
-              cpu: "500m"
+        - image: mohamedatef25/udagram-frontend
+          name: frontend
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+         # resources:
+         #   requests:
+         #     memory: "64Mi"
+         #     cpu: "250m"
+         #   limits:
+         #     memory: "1024Mi"
+         #     cpu: "500m"
       restartPolicy: Always

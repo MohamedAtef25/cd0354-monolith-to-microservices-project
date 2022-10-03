@@ -3,7 +3,7 @@ kind: ConfigMap
 data:
   POSTGRES_HOST: databaseformohamedatef.c9jdpumzmcqd.us-east-1.rds.amazonaws.com
   POSTGRES_DB: postgres
-  AWS_BUCKET: arn:aws:s3:::awsmohamedbucket2
+  AWS_BUCKET: awsmohamedbucket2
   AWS_REGION: us-east-2
   AWS_PROFILE: default
   JWT_SECRET: testing

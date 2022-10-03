@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 data:
-  POSTGRES_HOST: databaseformohamedatef.c9jdpumzmcqd.us-east-1.rds.amazonaws.com
+  POSTGRES_HOST: databasemohamed.cba4wabohuir.us-east-2.rds.amazonaws.com
   POSTGRES_DB: postgres
   AWS_BUCKET: awsmohamedbucket2
   AWS_REGION: us-east-2
